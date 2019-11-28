@@ -1,18 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="Name"
+            android:gravity="center"/>
+
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout1">
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="Surname"
+            android:gravity="center"/>
+
+
+        <EditText
+            android:id="@+id/etSurname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout2">
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="Marks"
+            android:gravity="center"/>
+
+
+        <EditText
+            android:id="@+id/etMarks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/layout3">
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="Id"
+            android:gravity="center"/>
+
+
+        <EditText
+            android:id="@+id/etId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="add data"
+        android:layout_below="@id/layout4"/>
+
+
+    <Button
+        android:id="@+id/button_viewAll"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="View All"
+        android:layout_below="@id/layout4"
+        android:layout_toRightOf="@id/button_add"/>
+
+
+    <Button
+        android:id="@+id/button_update"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Update"
+        android:layout_below="@id/button_add" />
+
+    <Button
+        android:id="@+id/button_delete"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Delete"
+        android:layout_below="@id/button_add"
+        android:layout_toRightOf="@id/button_update"/>
+
+</RelativeLayout>
